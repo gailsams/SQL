@@ -1,0 +1,25 @@
+-- create a camera shop database
+
+CREATE TABLE items (id INTEGER PRIMARY KEY, name TEXT, cost INTEGER, aisle INTEGER, brand TEXT);
+
+INSERT INTO items VALUES (1, "5dmarkiii", 2000, 2, "canon");
+INSERT INTO items VALUES (2, "d850", 3000, 5, "nikon");
+INSERT INTO items VALUES (3, "d3500", 650, 4, "nikon");
+INSERT INTO items VALUES (4, "d5600", 700, 1, "nikon");
+INSERT INTO items VALUES (5, "rebel_t7", 450, 2, "canon");
+INSERT INTO items VAlues (6, "r10", 999, 3, "canon");
+INSERT INTO items VALUES (7, "t100", 364, 4, "canon");
+INSERT INTO items VALUES (8, "d3784", 437, 5, "nikon");
+INSERT INTO items VALUES (9, "d3627", 4367, 4, "nikon");
+INSERT INTO items VALUES (10, "g7x", 700, 3, "canon");
+INSERT INTO items VALUES (11, "d647", 217, 3, "nikon");
+INSERT INTO items VALUES (12, "rebelt6", 478, 5, "canon");
+INSERT INTO items VALUES (13, "m100", 799, 3, "canon");
+INSERT INTO items VALUES (14, "z1vf", 2679, 4, "sony");
+INSERT INTO items VALUES (15, "d2647", 314, 2, "nikon");
+
+-- display the database ordered by cost
+SELECT * FROM items WHERE cost >1 ORDER BY cost;
+
+-- what is the sum of the costs?
+SELECT SUM (cost) from items
